@@ -13,7 +13,7 @@ public class Student {
     private String cell_phone;
     private String email;
     private String department;
-    private float marks[];
+    private float[] marks;
     private float total_marks;
     private float percentage;
     private String grade;
@@ -154,34 +154,33 @@ public class Student {
         setTotal_marks(total);
     }
     public void calculatePercentage(){
-        float percentage = 0.0f;
-        percentage = (total_marks/500)*100;
+        this.percentage = this.total_marks/marks.length*100;
     }
 
     public void calculateGrades(){
         String grade;
-        if(percentage>=94 || percentage<=100)
-            grade = "A+";
-        else if((percentage>=87 || percentage<=93))
-            grade = "A";
-        else if((percentage>=80 || percentage<=86))
-            grade = "A-";
-        else if((percentage>=77 || percentage<=79))
-            grade = "B+";
-        else if((percentage>=73 || percentage<=76))
-            grade = "B";
-        else if((percentage>=70 || percentage<=72))
-            grade = "B-";
-        else if((percentage>=67 || percentage<=69))
-            grade = "C+";
-        else if((percentage>=63 || percentage<=66))
-            grade = "C";
-        else if((percentage>=62 || percentage<=60))
-            grade = "C-";
-        else if((percentage>=50 || percentage<=59))
-            grade = "D";
-        else if((percentage>=0 || percentage<=49))
-            grade = "F";
+        if(this.percentage>=94 || this.percentage<=100)
+            this.grade = "A+";
+        else if((this.percentage>=87 || this.percentage<=93))
+            this.grade = "A";
+        else if((this.percentage>=80 || this.percentage<=86))
+            this.grade = "A-";
+        else if((this.percentage>=77 || this.percentage<=79))
+            this.grade = "B+";
+        else if((this.percentage>=73 || this.percentage<=76))
+            this.grade = "B";
+        else if((this.percentage>=70 || this.percentage<=72))
+            this.grade = "B-";
+        else if((this.percentage>=67 || this.percentage<=69))
+            this.grade = "C+";
+        else if((this.percentage>=63 || this.percentage<=66))
+            this.grade = "C";
+        else if((this.percentage>=62 || this.percentage<=60))
+            this.grade = "C-";
+        else if((this.percentage>=50 || this.percentage<=59))
+            this.grade = "D";
+        else
+            this.grade = "F";
 
 
     }
